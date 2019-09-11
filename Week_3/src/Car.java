@@ -3,6 +3,8 @@ public class Car {
 	private String color;
 	private Transmission transmission;
 	private static int numberOfCars;
+	private int speed;
+	private int gear;
 	
 	public Car ()
 	{
@@ -13,6 +15,7 @@ public class Car {
 		this.color = color;
 		transmission = t;
 		++Car.numberOfCars;
+		this.gear = 1;
 	}
 	
 	public String toString ()
