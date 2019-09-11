@@ -7,6 +7,7 @@ class CarTest {
 	@Test
 	void test() {
 		Car jalopy = new Car();
+		Car sportsCar = new Car("red", Transmission.MANUAL);
 	}
 
 }
