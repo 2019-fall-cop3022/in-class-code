@@ -2,6 +2,25 @@
 public class ArrayStuff {
 	public static void main (String[] args)
 	{
+		int f[] = new int[5];
+		
+		for (int temp: f)
+		{
+			temp = 4;
+		}
+		for (int temp: f)
+		{
+			System.out.println(temp);
+		}
+		for (int i = 0; i < 5; ++i)
+		{
+			f[i] = 4;
+		}
+		for (int temp: f)
+		{
+			System.out.println(temp);
+		}
+		
 		DaysOfTheWeek mon = DaysOfTheWeek.MONDAY;
 		
 		switch (mon)
