@@ -20,7 +20,20 @@ public class Car {
 	
 	public String toString ()
 	{
-		return this.color+" car going "+this.speed+" mph in "+this.gear;
+		return this.color+" car going "+this.speed+" mph in "+this.getGear();
+	}
+	
+	private String getGear ()
+	{
+		if (this.transmission == Transmission.MANUAL)
+		{
+			return ""+this.gear;
+		}
+		else
+		{
+			return "drive";
+		}
+		
 	}
 	
 	public static int getNumberOfCars ()
