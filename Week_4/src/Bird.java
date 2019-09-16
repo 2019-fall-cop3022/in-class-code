@@ -1,6 +1,5 @@
 
-public class Bird {
-	private String color;
+public class Bird extends Critter {
 	
 	public Bird ()
 	{
@@ -9,11 +8,11 @@ public class Bird {
 	
 	public Bird (String color)
 	{
-		this.color = color;
+		super(color);
 	}
 	
 	public String move ()
 	{
-		return this.color+" and flapping";
+		return super.move()+"flapping";
 	}
 }
