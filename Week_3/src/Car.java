@@ -20,11 +20,17 @@ public class Car {
 	
 	public String toString ()
 	{
-		return this.color;
+		return this.color+" car going "+this.speed+" mph in "+this.gear;
 	}
 	
 	public static int getNumberOfCars ()
 	{
 		return Car.numberOfCars;
+	}
+	
+	public void accelerate (int newSpeed)
+	{
+		this.speed = newSpeed;
+		++this.gear;
 	}
 }
