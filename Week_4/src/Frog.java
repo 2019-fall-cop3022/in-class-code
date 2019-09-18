@@ -1,6 +1,6 @@
 
-public class Frog {
-	private String color;
+public class Frog extends Critter
+{
 	private int wartCount;
 	
 	public Frog ()
@@ -10,12 +10,12 @@ public class Frog {
 	
 	public Frog (String color)
 	{
-		this.color = color;
+		super(color);
 		this.wartCount = 12;
 	}
 	
 	public String move ()
 	{
-		return this.color+" and hopping";
+		return super.move()+"hopping";
 	}
 }

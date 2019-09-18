@@ -11,6 +11,7 @@ public class Bird extends Critter {
 		super(color);
 	}
 	
+	@Override
 	public String move ()
 	{
 		return super.move()+"flapping";
