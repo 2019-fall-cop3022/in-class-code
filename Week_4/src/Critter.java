@@ -12,6 +12,11 @@ public class Critter {
 		this.color = color;
 	}
 	
+	public String getColor ()
+	{
+		return this.color;
+	}
+	
 	public String move ()
 	{
 		return this.color+" and ";
