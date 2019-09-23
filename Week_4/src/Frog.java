@@ -5,13 +5,18 @@ public class Frog extends Critter
 	
 	public Frog ()
 	{
-		this("green");
+		this("green", 12);
 	}
 	
-	public Frog (String color)
+	public Frog (String color, int wartCount)
 	{
 		super(color);
-		this.wartCount = 12;
+		this.wartCount = wartCount;
+	}
+	
+	public int getWartCount ()
+	{
+		return this.wartCount;
 	}
 	
 	public String move ()

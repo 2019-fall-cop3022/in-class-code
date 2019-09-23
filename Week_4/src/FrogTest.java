@@ -9,7 +9,7 @@ class FrogTest {
 		Frog kermit = new Frog();
 		assertEquals("green and hopping", kermit.move());
 		
-		Frog dartFrog = new Frog("red");
+		Frog dartFrog = new Frog("red", 7);
 		assertEquals("red and hopping", dartFrog.move());
 	}
 
