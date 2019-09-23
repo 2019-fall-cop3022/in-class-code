@@ -14,6 +14,6 @@ public class Bird extends Critter {
 	@Override
 	public String move ()
 	{
-		return super.move()+"flapping";
+		return super.getColor()+" and flapping";
 	}
 }

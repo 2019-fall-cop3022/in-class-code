@@ -16,6 +16,6 @@ public class Frog extends Critter
 	
 	public String move ()
 	{
-		return super.move()+"hopping";
+		return super.getColor()+" and hopping";
 	}
 }

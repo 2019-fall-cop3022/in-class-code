@@ -1,5 +1,5 @@
 
-public class Critter {
+public abstract class Critter {
 	private String color;
 	
 	public Critter ()
@@ -17,8 +17,5 @@ public class Critter {
 		return this.color;
 	}
 	
-	public String move ()
-	{
-		return this.color+" and ";
-	}
+	public abstract String move ();
 }
