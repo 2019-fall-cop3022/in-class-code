@@ -1,5 +1,6 @@
 
 public class Bird extends Critter {
+	public static final int FOO = 12;
 	
 	public Bird ()
 	{

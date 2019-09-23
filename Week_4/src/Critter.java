@@ -12,7 +12,7 @@ public abstract class Critter {
 		this.color = color;
 	}
 	
-	public String getColor ()
+	public final String getColor ()
 	{
 		return this.color;
 	}

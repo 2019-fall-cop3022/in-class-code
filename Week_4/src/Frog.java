@@ -1,5 +1,5 @@
 
-public class Frog extends Critter
+public final class Frog extends Critter
 {
 	private int wartCount;
 	
