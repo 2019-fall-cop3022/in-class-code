@@ -28,6 +28,20 @@ class CritterTest {
 			Frog f1 = (Frog)zoo[1];
 			assertEquals(12, f1.getWartCount());
 		}
+		
+		try
+		{
+			assertEquals("blue and flapping", zoo[6].move());
+			fail("foo");
+		}
+		catch (NullPointerException e)
+		{
+			
+		}
+		catch (Exception e)
+		{
+			
+		}
 	}
 
 }
