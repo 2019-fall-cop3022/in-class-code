@@ -5,13 +5,26 @@ public class Main {
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
-		try
+		while (true)
 		{
-			Main.getPositiveInt(keyboard);
-		}
-		catch (Exception e)
-		{
-			
+			try
+			{
+				Main.getPositiveInt(keyboard);
+				break;
+			}
+			catch (NegativeNumberException e)
+			{
+				System.out.println(e.getMessage());
+			}
+			catch (Exception e)
+			{
+				System.out.println("ahhh");
+			}
+			finally
+			{
+				System.out.println("always runs");
+				keyboard.close();
+			}
 		}
 	}
 	
@@ -22,11 +35,16 @@ public class Main {
 		int input;
 		input = keyboard.nextInt();
 		
-		if (true)
-		{
-			throw new NegativeNumberException();
-		}
+		Main.testIsPositive(input);
 		
 		return 0;
+	}
+	
+	public static void testIsPositive (int input) throws NegativeNumberException
+	{
+		if (input < 0)
+		{
+			throw new NegativeNumberException(input + " is a negative number");
+		}
 	}
 }
