@@ -9,16 +9,15 @@ public class Files {
 		Scanner input = new Scanner(System.in);
 		int foo = input.nextInt();
 		
-		try
+		try (FileInputStream infs = new FileInputStream("foo.txt"))
 		{
-			FileInputStream infs = new FileInputStream("foo.txt");
 			Scanner in = new Scanner(infs);
 			int bar = in.nextInt();
 			System.out.println("From file: "+bar);
 			bar = in.nextInt();
 			System.out.println("From file: "+bar);
 			
-			FileOutputStream outfs = new FileOutputStream("foo.out");
+			FileOutputStream outfs = new FileOutputStream("foo.out", true);
 			PrintWriter out = new PrintWriter(outfs);
 			out.println("From file: "+bar);
 			out.flush(); // if missing, output file will be empty
