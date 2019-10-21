@@ -1,12 +1,12 @@
 
 public class Sort {
-	public static void sortMe (int[] a)
+	public static void sortMe (Comparable[] a)
 	{
 		for (int i = 0; i < a.length - 1; ++i)
 		{
 			for (int j = i + 1; j < a.length; ++j)
 			{
-				if (a[i] > a[j])
+				if (a[i].compareTo(a[j]) > 0)
 				{
 					swap(a, i, j);
 				}
@@ -14,9 +14,9 @@ public class Sort {
 		}
 	}
 	
-	public static void swap (int[] a, int i, int j)
+	public static void swap (Comparable[] a, int i, int j)
 	{
-		int temp = a[i];
+		Comparable temp = a[i];
 		a[i] = a[j];
 		a[j] = temp;
 	}
