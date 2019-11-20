@@ -31,7 +31,7 @@ public class VennComponent extends JComponent implements ChangeListener
 	@Override
 	public Dimension getPreferredSize()
 	{
-		return new Dimension(370, 220);
+		return new Dimension(this.x_offset + 200 + 10, 220);
 	}
 	
 	@Override
@@ -40,5 +40,6 @@ public class VennComponent extends JComponent implements ChangeListener
 		JSlider wheel = (JSlider)event.getSource();
 		x_offset = (Integer)wheel.getValue();
 		this.repaint();
+		this.revalidate();
 	}
 }

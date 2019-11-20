@@ -7,6 +7,8 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class VennDiagramViewer extends JFrame
 {
@@ -29,6 +31,7 @@ public class VennDiagramViewer extends JFrame
 		//this.add(new JSpinner(wheel), BorderLayout.SOUTH);
 		JSlider wheel = new JSlider(10, 200, 160);
 		wheel.addChangeListener(venn);
+		wheel.addChangeListener(new ResizeListener());
 
 		this.add(wheel, BorderLayout.SOUTH);
 		
@@ -39,5 +42,15 @@ public class VennDiagramViewer extends JFrame
 	{
 		VennDiagramViewer venn = new VennDiagramViewer();
 		venn.setVisible(true);
+	}
+	
+	private class ResizeListener implements ChangeListener
+	{
+		@Override
+		public void stateChanged (ChangeEvent event)
+		{
+			
+			VennDiagramViewer.this.pack();
+		}
 	}
 }
