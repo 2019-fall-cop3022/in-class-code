@@ -2,7 +2,9 @@ import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 
 public class VennDiagramViewer extends JFrame
@@ -17,10 +19,13 @@ public class VennDiagramViewer extends JFrame
 		text.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(text, BorderLayout.NORTH);
 		
-		this.add(new JButton("Hey-o"), BorderLayout.SOUTH);
-		
 		VennComponent venn = new VennComponent();
 		this.add(venn);
+		
+		SpinnerNumberModel wheel = new SpinnerNumberModel(160, 10, 200, 10);
+		wheel.addChangeListener(venn);
+		
+		this.add(new JSpinner(wheel), BorderLayout.SOUTH);
 		
 		this.pack();
 	}
