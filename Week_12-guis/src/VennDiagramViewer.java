@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JSlider;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
@@ -22,10 +23,14 @@ public class VennDiagramViewer extends JFrame
 		VennComponent venn = new VennComponent();
 		this.add(venn);
 		
-		SpinnerNumberModel wheel = new SpinnerNumberModel(160, 10, 200, 10);
-		wheel.addChangeListener(venn);
+		//SpinnerNumberModel wheel = new SpinnerNumberModel(160, 10, 200, 10);
+		//wheel.addChangeListener(venn);
 		
-		this.add(new JSpinner(wheel), BorderLayout.SOUTH);
+		//this.add(new JSpinner(wheel), BorderLayout.SOUTH);
+		JSlider wheel = new JSlider(10, 200, 160);
+		wheel.addChangeListener(venn);
+
+		this.add(wheel, BorderLayout.SOUTH);
 		
 		this.pack();
 	}

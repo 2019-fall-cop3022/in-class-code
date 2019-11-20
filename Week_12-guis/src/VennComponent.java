@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 
 import javax.swing.JComponent;
+import javax.swing.JSlider;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -36,7 +37,7 @@ public class VennComponent extends JComponent implements ChangeListener
 	@Override
 	public void stateChanged (ChangeEvent event)
 	{
-		SpinnerNumberModel wheel = (SpinnerNumberModel)event.getSource();
+		JSlider wheel = (JSlider)event.getSource();
 		x_offset = (Integer)wheel.getValue();
 		this.repaint();
 	}
