@@ -14,7 +14,7 @@ public class VennDiagramViewer extends JFrame
 {
 	public VennDiagramViewer()
 	{
-		super();
+		super("FOO");
 		// this.setSize(500, 300);
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
