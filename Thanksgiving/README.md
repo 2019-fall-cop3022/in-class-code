@@ -14,6 +14,8 @@
 	* Find the JAR (after verifying it's good with `md5 DOWNLOADED.zip` and unzipping) and save/close out of the build path window.
 
 ### Prepared statements
+![Comic strip joke about SQL injectioin attacks](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
 To protect against SQL injection attacks, you should always use prepared SQL statements.
 In [src/DBMain.java](src/DBMain.java), you can replace the `Statement` and query parts with the code below to run a parameterized query.
 ```java
