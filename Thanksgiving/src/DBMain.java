@@ -15,6 +15,7 @@ public class DBMain
 
 			while (rapper.next())
 			{
+				// annoyingly, column indices are 1-based, not 0-based
 				int id = rapper.getInt(1);
 				String name = rapper.getString(2);
 				String quality = rapper.getString(3);
