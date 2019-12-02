@@ -24,7 +24,7 @@ public class RaceCondition extends Thread
 	{
 		Counter counter = new Counter();
 
-		RaceCondition[] threads = new RaceCondition[30000];
+		RaceCondition[] threads = new RaceCondition[1000];
 
 		for (int i = 0; i < threads.length; ++i)
 		{
