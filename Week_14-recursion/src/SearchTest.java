@@ -10,6 +10,7 @@ class SearchTest {
 		
 		assertEquals(0, BinarySearch.search(numbers, 0, numbers.length - 1, 12));
 		assertEquals(9, BinarySearch.search(numbers, 0, numbers.length - 1, 1003));
+		assertEquals(-1, BinarySearch.search(numbers, 0, numbers.length - 1, 999));
 	}
 
 }

@@ -24,7 +24,7 @@ public class BinarySearch {
 		else
 		{
 			// recurse left half
-			return BinarySearch.search(numbers, startIndex, middle, searchKey);
+			return BinarySearch.search(numbers, startIndex, middle - 1, searchKey);
 		}
 		// approaching a base case
 	}
