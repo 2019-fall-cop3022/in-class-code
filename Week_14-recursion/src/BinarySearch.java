@@ -19,7 +19,7 @@ public class BinarySearch {
 		else if (comparedValue > 0)
 		{
 			// recurse right half
-			return BinarySearch.search(numbers, middle, endIndex, searchKey);
+			return BinarySearch.search(numbers, middle + 1, endIndex, searchKey);
 		}
 		else
 		{

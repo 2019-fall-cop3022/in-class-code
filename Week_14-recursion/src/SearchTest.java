@@ -9,6 +9,7 @@ class SearchTest {
 		Integer[] numbers = {12, 13, 19, 23, 39, 498, 583, 679, 1001, 1003};
 		
 		assertEquals(0, BinarySearch.search(numbers, 0, numbers.length - 1, 12));
+		assertEquals(9, BinarySearch.search(numbers, 0, numbers.length - 1, 1003));
 	}
 
 }
